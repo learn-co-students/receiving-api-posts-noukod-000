@@ -6732,3 +6732,287 @@ Processing by PostsController#show as */*
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "14"]]
   Rendered posts/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+Started GET "/posts/new" for 127.0.0.1 at 2019-02-16 01:06:23 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.0.7.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (171.7ms)
+Completed 200 OK in 752ms (Views: 707.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-02-16 01:06:25 -0500
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-02-16 01:06:25 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-02-16 01:06:25 -0500
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2019-02-16 01:06:25 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-02-16 01:06:25 -0500
+Started POST "/posts" for 127.0.0.1 at 2019-02-16 01:06:42 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pQ0SEhhx2TAonKWeie4zaU6n5L3+cPJgQ1A3HJtgfvtKLMFt37EyOctnsagka5J7/nsJ4jc+AbKZSnnMxealXQ==", "post"=>{"title"=>"fb", "description"=>"ayiti en dey"}}
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "fb"], ["description", "ayiti en dey"], ["created_at", "2019-02-16 06:06:42.817029"], ["updated_at", "2019-02-16 06:06:42.817029"]]
+  [1m[35m (44.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/15
+Completed 200 OK in 52ms (ActiveRecord: 47.1ms)
+
+
+Started GET "/posts/15" for 127.0.0.1 at 2019-02-16 01:06:42 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 56ms (Views: 49.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-02-16 01:07:21 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 55ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-02-16 01:07:21 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-02-16 01:07:21 -0500
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2019-02-16 01:07:21 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-02-16 01:07:21 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-02-16 01:07:21 -0500
+Started GET "/posts/new" for 127.0.0.1 at 2019-02-16 01:07:54 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 59ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-02-16 01:07:54 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-02-16 01:07:54 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-02-16 01:07:54 -0500
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2019-02-16 01:07:54 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-02-16 01:07:54 -0500
+Started POST "/posts" for 127.0.0.1 at 2019-02-16 01:08:02 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cVZm669jn3SR3XoEVxgpL0AHcHIbbcyQXwuvFgPyFkqed7WUaKN0fXImbjL6nYg98NudLdIjP0KFEeHGXXTN7A==", "post"=>{"title"=>"test", "description"=>"ayiti en dey"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "test"], ["description", "ayiti en dey"], ["created_at", "2019-02-16 06:08:02.055158"], ["updated_at", "2019-02-16 06:08:02.055158"]]
+  [1m[35m (158.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/16
+Completed 200 OK in 165ms (ActiveRecord: 160.1ms)
+
+
+Started GET "/posts/16" for 127.0.0.1 at 2019-02-16 01:08:02 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/15" for 127.0.0.1 at 2019-02-16 01:13:27 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-02-16 01:13:27 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-02-16 01:13:27 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-02-16 01:13:27 -0500
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2019-02-16 01:13:27 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-02-16 01:13:27 -0500
+Started GET "/posts/new" for 127.0.0.1 at 2019-02-16 01:13:33 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 57ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-02-16 01:13:33 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-02-16 01:13:33 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-02-16 01:13:33 -0500
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2019-02-16 01:13:33 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-02-16 01:13:33 -0500
+Started POST "/posts" for 127.0.0.1 at 2019-02-16 01:13:45 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v+yuBsDV7Rgh5Ly3hr48a5XShaQR0m8Dz41vGPhIAnRQzX15BxUGEcIfqIErO515JQ5o+9icnNEVlyHIps7Z0g==", "post"=>{"title"=>"iphone", "description"=>"the best"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (45.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "iphone"], ["description", "the best"], ["created_at", "2019-02-16 06:13:45.989402"], ["updated_at", "2019-02-16 06:13:45.989402"]]
+  [1m[35m (21.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/17
+Completed 200 OK in 72ms (ActiveRecord: 66.6ms)
+
+
+Started GET "/posts/17" for 127.0.0.1 at 2019-02-16 01:13:46 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-02-16 01:23:01 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 54ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-02-16 01:23:02 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-02-16 01:23:02 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-02-16 01:23:02 -0500
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2019-02-16 01:23:02 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-02-16 01:23:02 -0500
+Started POST "/posts" for 127.0.0.1 at 2019-02-16 01:23:19 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/6VtkknPvb9oSoV6Ee/S4Q6DpCDkirTI3IVUYilCPa0QhL7tjg9WtouxkUy8anPzvl9Jfy3ERxoGnxqyd8TmCw==", "post"=>{"title"=>"like", "description"=>"ds dscx"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (45.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "like"], ["description", "ds dscx"], ["created_at", "2019-02-16 06:23:19.973487"], ["updated_at", "2019-02-16 06:23:19.973487"]]
+  [1m[35m (20.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/18
+Completed 200 OK in 70ms (ActiveRecord: 66.1ms)
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2019-02-16 01:23:20 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-02-16 01:29:30 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.0.7.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (54.3ms)
+Completed 200 OK in 509ms (Views: 462.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-02-16 01:29:31 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-02-16 01:29:31 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-02-16 01:29:31 -0500
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2019-02-16 01:29:31 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-02-16 01:29:31 -0500
+Started POST "/posts" for 127.0.0.1 at 2019-02-16 01:29:36 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hlivSJ9iCFnbg7DIvkSVpujDOFw8B1ZfKlZBrHiNucBpeXw3WKLjUDh4pP4TwTS0WB/VA/VJpY3wTA98JgtiZg==", "post"=>{"title"=>"le test", "description"=>"ds dscx"}}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (48.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "le test"], ["description", "ds dscx"], ["created_at", "2019-02-16 06:29:36.646842"], ["updated_at", "2019-02-16 06:29:36.646842"]]
+  [1m[35m (21.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 70.1ms)
+
+
+  
+NoMethodError (undefined method `redirect' for #<PostsController:0x00007f85ec121140>
+Did you mean?  redirect_to):
+  
+app/controllers/posts_controller.rb:22:in `create'
+  Rendering /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb
+  Rendering /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb
+  Rendered /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.text.erb (0.7ms)
+  Rendering /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb
+  Rendered /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.8ms)
+  Rendering /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb
+  Rendered /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (75.2ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+Started GET "/posts/new" for 127.0.0.1 at 2019-02-16 01:30:08 -0500
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /home/dowpm/.rbenv/versions/2.4.4/lib/ruby/gems/2.4.0/gems/activerecord-5.0.7.1/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 324ms (Views: 279.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-02-16 01:30:09 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-02-16 01:30:09 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-02-16 01:30:09 -0500
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2019-02-16 01:30:09 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-02-16 01:30:09 -0500
+Started POST "/posts" for 127.0.0.1 at 2019-02-16 01:30:11 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BYQKVgycQCR8uTP6Ht+akZxE7GeuwLIhXue3l1rLBHzqpdkpy1yrLZ9CJ8yzWjuDLJgBOGeOQfOE/flHBE3f2g==", "post"=>{"title"=>"le test", "description"=>"ds dscx"}}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "le test"], ["description", "ds dscx"], ["created_at", "2019-02-16 06:30:11.545508"], ["updated_at", "2019-02-16 06:30:11.545508"]]
+  [1m[35m (22.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/20
+Completed 200 OK in 33ms (ActiveRecord: 28.7ms)
+
+
+Started GET "/posts/20" for 127.0.0.1 at 2019-02-16 01:30:11 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 41.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/20" for 127.0.0.1 at 2019-02-16 01:30:17 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 57ms (Views: 52.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-02-16 01:30:17 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-02-16 01:30:17 -0500
+Started GET "/posts/new" for 127.0.0.1 at 2019-02-16 01:43:50 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 85ms (Views: 64.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-02-16 01:43:50 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-02-16 01:43:50 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-02-16 01:43:51 -0500
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2019-02-16 01:43:51 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-02-16 01:43:51 -0500
+Started POST "/posts" for 127.0.0.1 at 2019-02-16 01:44:05 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oshW7ms0Y0zyqV9ac+aLMKiWgKxoE0d/qqIOivnb8TNN6YWRrPSIRRFSS2zeYyoiGEpt86FdtK1wuEBap10qlQ==", "post"=>{"title"=>"le test", "description"=>"ayiti en dey"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (50.9ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "le test"], ["description", "ayiti en dey"], ["created_at", "2019-02-16 06:44:05.957662"], ["updated_at", "2019-02-16 06:44:05.957662"]]
+  [1m[35m (25.7ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 201 Created in 132ms (Views: 50.4ms | ActiveRecord: 76.7ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2019-02-16 01:46:37 -0500
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 78ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2019-02-16 01:46:38 -0500
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2019-02-16 01:46:38 -0500
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2019-02-16 01:46:38 -0500
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2019-02-16 01:46:38 -0500
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2019-02-16 01:46:38 -0500
+Started POST "/posts" for 127.0.0.1 at 2019-02-16 01:46:44 -0500
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aixewO8BmqewrD4hCw7gyFyiJAEMXvds8Lywfr/2HmWFDY2/KMFxrlNXKhemi0Ha7H7JXsUQBL4qpv6u4XDFww==", "post"=>{"title"=>"le test", "description"=>"ds dscx"}}
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (53.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "le test"], ["description", "ds dscx"], ["created_at", "2019-02-16 06:46:44.760328"], ["updated_at", "2019-02-16 06:46:44.760328"]]
+  [1m[35m (20.2ms)[0m  [1m[36mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 201 Created in 80ms (Views: 1.2ms | ActiveRecord: 74.5ms)
+
+
